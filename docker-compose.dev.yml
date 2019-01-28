@@ -21,22 +21,3 @@ services:
     ports:
       - "27017:27017"
     restart: always
-  mysql:
-    container_name: mysql
-    image: mysql:5.7
-    volumes:
-      - ./data/mysql:/var/lib/mysql
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: 'secret'
-    restart: always
-  redis:
-    container_name: redis
-    image: redis:alpine
-    command: ["redis-server", "--appendonly", "yes"]
-    volumes:
-      - ./data/redis:/data
-    ports:
-      - "6379:6379"
-    restart: always

@@ -1,9 +1,9 @@
-version: '2'
+version: "2"
 
 services:
   docker-app-demo:
     container_name: docker_app_demo
-    build : .
+    build: .
     volumes:
       - ./src:/app
     ports:
@@ -28,7 +28,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: 'secret'
+      MYSQL_ROOT_PASSWORD: "secret"
     restart: always
   redis:
     container_name: redis
